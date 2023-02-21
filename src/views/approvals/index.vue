@@ -1,6 +1,6 @@
 <template>
     <div>
-        首页
+        审批
     </div>
 </template>
 
@@ -10,6 +10,6 @@
     }
 </script>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
 
 </style>

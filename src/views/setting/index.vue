@@ -1,6 +1,6 @@
 <template>
     <div>
-        首页
+        公司设置
     </div>
 </template>
 

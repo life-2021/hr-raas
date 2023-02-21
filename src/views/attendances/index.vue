@@ -1,6 +1,6 @@
 <template>
     <div>
-        首页
+        考勤
     </div>
 </template>
 
