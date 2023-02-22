@@ -1,12 +1,12 @@
 <template>
     <div>
-
+        <!-- 工资 -->
     </div>
 </template>
 
 <script>
     export default {
-        工资
+        
     }
 </script>
 
