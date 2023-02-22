@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <!-- 一级路由 -->
     <router-view />
   </div>
 </template>
@@ -9,4 +10,4 @@ export default {
   name: 'App'
 }
 </script>
-<!-- 测试 -->
+<!-- 测试222 -->
