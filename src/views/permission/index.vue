@@ -43,6 +43,9 @@
         console.log(row);
       }
     },
+    created(){
+      
+    },
     data() {
       return {
         tableData: [{
@@ -85,11 +88,7 @@
           date: '审批',
           name: 'approvals',
           province: '审批',
-        }, {
-          date: '用户查看按钮',
-          name: 'edit-people',
-          province: '用户查看按钮',
-        },]      
+        }, ]      
       }
     }
   }

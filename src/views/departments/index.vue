@@ -50,7 +50,7 @@
                     操作<i class="el-icon-arrow-down el-icon--right"></i>
                   </span>
                   <el-dropdown-menu slot="dropdown">
-                    <el-dropdown-item>添加子部门</el-dropdown-item>
+                    <el-dropdown-item @click="addFn">添加子部门</el-dropdown-item>
                     <el-dropdown-item>查看部门</el-dropdown-item>
                     <el-dropdown-item>删除部门</el-dropdown-item>
                   </el-dropdown-menu>
@@ -135,6 +135,9 @@ export default {
     };
   },
   methods: {
+    addFn(){
+
+    },
     handleNodeClick(data) {
       console.log(data);
     },
