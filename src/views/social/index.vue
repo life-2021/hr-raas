@@ -40,23 +40,9 @@
 </template>
 
 <script>
-import {getRoleList} from "@/api/setting"
+
     export default {
-        data(){
-          return{
-            list:[],//承接数组
-             page: {
-        page: 1,
-        pageSize: 10,
-        total: 0
-      },
-          }
-        },
-        methods:{
-         async getRoleList(){
-            await getRoleList()
-          }
-        }
+     
     }
 </script>
 

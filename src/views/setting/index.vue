@@ -16,7 +16,8 @@
                 @click="addRoleBtnFn"
               >新增角色</el-button>
             </el-row>
-            <!-- 使用 Table 组件实现用户角色的渲染 -->
+
+            <!-- 使用 Table 组件实现用户角色的渲染  表格绑定数据-->
             <el-table :data="rolesList" border style="width: 100%">
               <el-table-column type="index" label="序号" width="120" />
               <el-table-column prop="name" label="角色名" width="240" />
@@ -32,7 +33,13 @@
 
             <!-- 分页区域 -->
             <el-row type="flex" justify="center" align="middle" style="hight:60px">
-                <el-pagination layout="prev, pager, next"/>
+              <!-- 1.当前页码 2.每页条数 3.总数 -->
+                <el-pagination 
+                :current-page="page.page"
+                :page-size="page.pagesize" 
+                :total="page.total" 
+                 layout="prev, pager, next"
+                 />
             </el-row>
           </el-tab-pane>
           <el-tab-pane label="公司信息">
@@ -71,8 +78,29 @@
 </template>
 
 <script>
+import {getRoleList} from "@/api/setting"
     export default {
-        
+           data(){
+          return{
+            list:[],//承接数组
+             page: {
+              //放置页码和相关数据
+                 page: 1,
+                 pageSize: 10,
+                 total: 0//总数
+              }
+         }
+       },
+        created(){
+              this.getRoleList()//获取角色列表
+        },
+        methods:{
+         async getRoleList(){
+           const{total,rows }= await getRoleList(this.page)
+           this.page.total=total
+           this.list=rows
+          }
+        }
     }
 </script>
 
