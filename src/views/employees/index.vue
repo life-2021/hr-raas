@@ -3,8 +3,10 @@
     <div class="app-container">
     <!-- 右侧增加按钮 -->
       <page-tools :show-before="true">
-                <el-button size="small" type="primary">导入</el-button>
-                <el-button size="small" type="primary">+新增员工</el-button>
+        <template slot="after">
+            <el-button size="small" type="primary">导入</el-button>
+            <el-button size="small" type="primary">+新增员工</el-button>
+        </template>
       </page-tools>
         <el-table v-loading="loading" :data="list">
           <el-table-column label="序号" sortable="" />
@@ -33,7 +35,7 @@
 </template>
 
 <script>
-    // import { getEmployeeList } from '@/api/employees'
+    import { getEmployeeList } from '@/api/employees'
     export default {
         data(){
             return{
@@ -61,6 +63,7 @@
     }
 </script>
 
-<style>
+<style scoped>
+  
     
 </style>
